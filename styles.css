@@ -1,2 +1,69 @@
-/*Maak hier jouw CSS!*/
-test
+/*mobile grid*/
+div {
+    padding: 5px;
+    background-color: #ffedad;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "."
+            "f";
+    grid-gap: 5px;
+}
+
+section {
+    background-color: #bd4a4a;
+    border-style: solid;
+    border-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-a {
+    grid-area: a;
+}
+
+.item-b {
+    grid-area: b;
+}
+
+.item-c {
+    grid-area: c;
+}
+
+.item-d {
+    grid-area: d;
+}
+
+.item-e {
+    grid-area: e;
+}
+
+.item-f {
+    grid-area: f;
+}
+
+
+
+/*regular screen grid*/
+@media screen and (min-width: 576px) {
+    div {
+        padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 240px 100px auto 50px;
+        grid-template-areas:
+        "a c c"
+        "b c c"
+        "b e d"
+        "b e ."
+        "f f f";
+        grid-gap: 10px;
+    }
+}
